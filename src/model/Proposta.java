@@ -2,16 +2,15 @@ package model;
 
 import java.util.Date;
 
-public class Proposta implements Documento {
+public class Proposta {
 	
 	private String nome;
 	
 	private Date dataExpiracao;
 	
-	private TipoDocumento tipo;
+	private String tipoDocumento = "Proposta";
 	
 	public Proposta(Date dataExpiracao) {
-		this.tipo = TipoDocumento.PROPOSTA;
 		this.dataExpiracao = dataExpiracao;
 	}
 
@@ -31,11 +30,8 @@ public class Proposta implements Documento {
 		this.dataExpiracao = dataExpiracao;
 	}
 
-	@Override
-	public TipoDocumento getTipo() {
-		return tipo;
+	public String getTipoDocumento() {
+		return tipoDocumento;
 	}
 	
-	
-
 }

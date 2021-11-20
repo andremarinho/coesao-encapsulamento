@@ -1,13 +1,13 @@
 package model;
 
-public class Declaracao implements Documento {
+public class Declaracao {
 	
 	private boolean assinatura;
 	
-	private TipoDocumento tipo;
+	private String tipoDocumento = "Declaracao";
 	
-	public Declaracao() {
-		this.tipo = TipoDocumento.DECLARACAO;	
+	public Declaracao(boolean assinatura) {
+		this.assinatura = assinatura;
 	}
 
 	public boolean isAssinatura() {
@@ -18,11 +18,7 @@ public class Declaracao implements Documento {
 		this.assinatura = assinatura;
 	}
 
-	@Override
-	public TipoDocumento getTipo() {
-		return this.tipo;
+	public String getTipoDocumento() {
+		return tipoDocumento;
 	}
-	
-	
-
 }

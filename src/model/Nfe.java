@@ -2,17 +2,15 @@ package model;
 
 import java.util.Date;
 
-public class Nfe implements Documento {
+public class Nfe {
 	
 	private String chaveNfe = "";
 	
 	private Date dataEmissao;
 	
-	private TipoDocumento tipo;
-	
-	public Nfe() {
-		this.tipo = TipoDocumento.NFE;
-	}
+	private String tipoDocumento = "Nfe";
+		
+	public Nfe() {	}
 		
 	public String getChaveNfe() {
 		return chaveNfe;
@@ -30,14 +28,10 @@ public class Nfe implements Documento {
 		this.dataEmissao = dataEmissao;
 	}
 
-	@Override
-	public TipoDocumento getTipo() {
-		return tipo;
+	public String getTipoDocumento() {
+		return tipoDocumento;
 	}
 
-	
-	
-	
 	
 
 }
